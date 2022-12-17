@@ -19,25 +19,24 @@ void ShowArray(string[] array)
     Console.WriteLine();
 }
 
-string[] NewArray(string[] array)
+
+void NewArray(string[] array)
 {
-    int lenght = new Random().Next(0, 4);
-    string[] newArray2 = new string[lenght];
-
-    Console.Write($"Длинна нового массива -> {lenght}");
-
-    for (int i = 0; i < lenght; i++)
+    Console.Write("Получившийся новый массив -> ");
+    for (int i = 0; i < array.Length; i++)
     {
-        newArray2[i] = array[i];
+        int count = 0;
+        if (array[i].Length < 4)
+        {
+            Console.Write(array[i] + " ");
+            count++;
+        }
     }
-    Console.WriteLine();
-    return newArray2;
-
 }
 
 Console.WriteLine("Введите размер массива");
 int size = Convert.ToInt32(Console.ReadLine());
 string[] newArray = Array(size);
 ShowArray(newArray);
-ShowArray(NewArray(newArray));
+NewArray(newArray);
 
