@@ -4,7 +4,7 @@
     string[] newArray = new string[size];
     for (int i = 0; i < size; i++)
     {
-        Console.WriteLine($"Введите элемент{i + 1} ");
+        Console.Write($"Введите элемент {i + 1} ");
         newArray[i] = Console.ReadLine();
     }
     return newArray;
@@ -34,7 +34,7 @@ void NewArray(string[] array)
     }
 }
 
-Console.WriteLine("Введите размер массива");
+Console.Write("Введите размер массива: ");
 int size = Convert.ToInt32(Console.ReadLine());
 string[] newArray = Array(size);
 ShowArray(newArray);
